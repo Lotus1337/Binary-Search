@@ -13,15 +13,17 @@ def binary_search(data, target, low, high):
             return binary_search(data, target, midpoint + 1, high)
 
     else:
-        return - 1
+        return -1
 
-data = [745, 1534, 2969, 4144, 4328, 5276, 5985, 6713, 6895, 7642]
+data = [int(x) for x in input("Enter your dataset: ").split(",")]
 
-target = 2969
+target = int(input("Enter your target: "))
 
 result = binary_search(data, target, 0, len(data) - 1)
 
 if result != -1:
-    print("Target is at", str(result))
+    print("Target is at", result)
+
 else:
-    print("Target is not present in data")
+    print("Target is not within the dataset")
+
